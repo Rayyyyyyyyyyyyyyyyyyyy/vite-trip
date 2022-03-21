@@ -1,20 +1,13 @@
 <script setup lang="ts">
 import HomeHeader from "@/components/HomePage/HomeHeader.vue"
-import Footer from "@/components/Footer.vue"
 import HomeExplore from "@/components/HomePage/HomeExplore.vue"
 import {reactive} from "@vue/reactivity";
-import {onMounted} from "@vue/runtime-core";
 
 
 const state = reactive({
   showHeader: true
 })
 
-onMounted(()=>{
-  window.addEventListener("scroll", ()=>{
-    console.log(window.scrollY)
-  })
-})
 </script>
 
 <template lang="pug">
@@ -25,7 +18,6 @@ HomeHeader(v-if="state.showHeader")
     .introduction--text Introduction
 .container
   HomeExplore
-Footer
 </template>
 
 <style lang="scss" scoped>

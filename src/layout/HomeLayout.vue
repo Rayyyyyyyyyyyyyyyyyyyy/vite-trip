@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import Header from "@/components/Header.vue"
+import Footer from "@/components/Footer.vue"
+
 import {reactive} from "@vue/reactivity";
 import {onMounted} from "@vue/runtime-core";
 
@@ -11,7 +12,7 @@ const getWindowScroll = () => {
 
 }
 onMounted(()=>{
-  window.addEventListener("scroll", ()=>{
+  document.body.addEventListener("scroll", ()=>{
     console.log(window.scrollY)
   })
 })
@@ -19,8 +20,8 @@ onMounted(()=>{
 </script>
 
 <template lang="pug">
-Header(:bg_transparent="true")
 router-view
+Footer
 
 </template>
 
