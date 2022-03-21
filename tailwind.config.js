@@ -1,0 +1,60 @@
+module.exports = {
+    content: [
+        // Example content paths...
+        './public/**/*.html',
+        './src/**/*.{js,jsx,ts,tsx,vue}',
+    ],
+    media: false, // or 'media' or 'class'
+    theme: {
+        extend: {
+            colors: {
+                primary: {
+                    DEFAULT: "#4464BE",
+                    light: "#46BEEB",
+                    fb: "#1877f2",
+                    twitter: "#1da1f2"
+                },
+                secondary: {
+                    DEFAULT: "#E9EDF0",
+                    light: "#fff",
+                    dark: "#707070",
+                },
+                success: "#8FC69A",
+                warning: "#F9669C",
+                bg: {
+                    DEFAULT: "#F5F3F4",
+                    footer: "#26272B",
+                    icon: "#33353D",
+                    red: "#FF5555"
+                },
+                text: {
+                    DEFAULT: "#000",
+                }
+            },
+            fontFamily: {
+                SFProDisplay: [
+                    "SFProDisplay",
+                    "-apple-system",
+                    "BlinkMacSystemFont",
+                    "Arial",
+                    "sans-serif"
+                ]
+            },
+        },
+    },
+    variants: {
+        extend: {},
+    },
+    plugins: [
+
+        function ({ addComponents, theme }) {
+            addComponents({
+                ".text-vertical": {
+                    "writing-mode": "vertical-lr",
+                    "letter-spacing": "0.25rem"
+                }
+
+            })
+        }
+    ],
+}
