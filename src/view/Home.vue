@@ -1,17 +1,11 @@
 <script setup lang="ts">
-import HomeHeader from "@/components/HomePage/HomeHeader.vue"
 import HomeExplore from "@/components/HomePage/HomeExplore.vue"
-import {reactive} from "@vue/reactivity";
 
 
-const state = reactive({
-  showHeader: true
-})
 
 </script>
 
 <template lang="pug">
-HomeHeader(v-if="state.showHeader")
 .landing-header
   .introduction.text-vertical
     .introduction--line

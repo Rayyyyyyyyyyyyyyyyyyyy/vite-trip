@@ -9,12 +9,12 @@ import "./assets/styles/tailwind.scss";
 import router from "./router";
 import 'virtual:svg-icons-register';
 import svgIconPlugin from "@/plugins/svgIcon";
-import AOS from "aos";
-import 'aos/dist/aos.css';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const app = createApp(App)
-AOS.init();
 app.use(router)
 app.use(ElementPlus)
 app.use(svgIconPlugin, {imports: []});

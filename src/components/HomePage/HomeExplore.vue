@@ -82,6 +82,13 @@ import e6 from "@/assets/images/explore/e6.jpg"
     }
     &-item {
       @apply relative;
+
+      img {
+        &:hover{
+          transform: scale(1.2, 1.2);
+          transition: .5s;
+        }
+      }
       .hover-box {
         @apply absolute left-0 top-0 z-20 bg-transparent;
         @apply w-full h-full cursor-pointer;
@@ -90,6 +97,7 @@ import e6 from "@/assets/images/explore/e6.jpg"
           transition: .5s;
         }
       }
+
     }
 
     &-left {
