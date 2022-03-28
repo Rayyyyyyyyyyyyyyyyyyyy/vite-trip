@@ -5,6 +5,14 @@ import e3 from "@/assets/images/explore/e3.jpg"
 import e4 from "@/assets/images/explore/e4.jpg"
 import e5 from "@/assets/images/explore/e5.jpg"
 import e6 from "@/assets/images/explore/e6.jpg"
+import AOS from "aos";
+import {onMounted} from "@vue/runtime-core";
+
+
+
+onMounted(() => {
+  AOS.init();
+})
 
 </script>
 
@@ -18,7 +26,7 @@ import e6 from "@/assets/images/explore/e6.jpg"
 
   .explore-banner
     .explore-banner-left
-      .explore-banner-item
+      .explore-banner-item(data-aos="fade-in")
         .hover-box
         img(:src="e1" alt="explore-img")
       .explore-banner-item

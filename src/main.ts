@@ -9,11 +9,10 @@ import "./assets/styles/tailwind.scss";
 import router from "./router";
 import 'virtual:svg-icons-register';
 import svgIconPlugin from "@/plugins/svgIcon";
-
-import AOS from "aos";
 import "aos/dist/aos.css";
-AOS.init();
 
+
+// @ts-ignore
 const app = createApp(App)
 app.use(router)
 app.use(ElementPlus)
